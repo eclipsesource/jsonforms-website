@@ -441,7 +441,7 @@ button.docs-nav-button {
 .support-panel-circle {
     height: 150px;
     width: 150px;
-    border: 5px solid rgb(255,64,129);
+    border: 2px solid rgb(255,64,129);
     border-radius: 75px;
     margin-top: 0.25em;
     margin-bottom: 0.25em;
