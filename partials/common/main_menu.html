@@ -1,0 +1,18 @@
+<md-toolbar class="l-pinned-top">
+    <nav class="main-nav" layout="row">
+        <a id="logo_img" class="logo" layout="row" layout-align="start center">
+            <span class="inner-logo"><strong>JSON</strong>Forms</span>
+        </a>
+        <md-button ng-click="toggleMainMenu($event)" class="main-nav-button">
+            Site Menu
+            <span class="icon icon-arrow-drop-down"></span>
+        </md-button>
+        <ul class="primary-menu" layout="row" ng-class="showMainNav? 'is-visible':''">
+            <li class="primary-menu-link" ui-sref-active="active"><a ui-sref="examples" ng-click="hideMainMenu($event)">EXAMPLES</a></li>
+            <li class="primary-menu-link" ui-sref-active="active"><a ui-sref="docs" ng-click="hideMainMenu($event)">DOCS</a></li>
+            <li class="primary-menu-link" ui-sref-active="active"><a href="https://github.com/eclipsesource/jsonforms">GITHUB</a></li>
+            <li class="primary-menu-link" ui-sref-active="active"><a href="https://twitter.com/jsonforms">TWITTER</a></li>
+            <li class="primary-menu-link" ui-sref-active="active"><a ui-sref="support" ng-click="hideMainMenu($event)">SUPPORT</a></li>
+        </ul>
+    </nav>
+</md-toolbar>
