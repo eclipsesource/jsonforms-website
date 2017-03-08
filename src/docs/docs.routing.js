@@ -24,7 +24,9 @@ function docsRouting($stateProvider, $urlRouterProvider) {
                             {name: 'listing.listingcontroller'},
                             {name: 'listing.listingdirective'},
                             {name: 'docs'},
-                            {name: 'docs.uischemacontroller'}]);
+                            {name: 'docs.uischemacontroller'},
+                            {name: 'docs.additional'}
+                          ]);
                         deferred.resolve();
                     });
                     return deferred.promise;
@@ -74,6 +76,10 @@ function docsRouting($stateProvider, $urlRouterProvider) {
         .state('docs.uischema', {
             url: '/uischema',
             template: require('../../_site/partials/docs/uischema.html')
+        })
+        .state('docs.additional', {
+            url: '/additional',
+            template: require('../../_site/partials/docs/additional.html')
         });
 }
 
