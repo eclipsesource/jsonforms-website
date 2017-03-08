@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack --config webpack/webpack.dev.js --watch",
     "build": "NODE_ENV=production webpack --config webpack/webpack.build.js -optimize-dedupe --optimize-minimize",
-    "gen-md": "bundle exec jekyll build --source partials/docs --destination _site/partials/docs/"
+    "gen-md": "bundle exec jekyll build --source partials/docs --destination _site/partials/docs/",
+    "publish": "cd dist && git add .; git commit -m \"$(git log --oneline -1 | cut -c 9-)\"; git push; cd .."
   },
   "repository": {
     "type": "git",
