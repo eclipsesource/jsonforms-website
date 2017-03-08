@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="jsonforms-website"" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="jsonforms-website"" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="jsonforms-website"" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="jsonforms-website" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JSONForms</title>
+  <!-- local dev -->
+  <!--<base href="/">-->
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/jsonforms-logo.png">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <!-- async loading of analytics -->
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-61092266-1', 'auto');
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  <!-- End Google Analytics -->
+</head>
+<body layout="column" class="l-offset-nav site">
+<main-menu></main-menu>
+<div ui-view autoscroll="false" class="site-content"></div>
+
+<footer layout="row" layout-align="end center" flex="none">
+  <span>&copy; EclipseSource 2017</span>
+  <span class="imprint-link"><a ui-sref="imprint">Imprint</a></span>
+</footer>
+<script type="text/javascript" src="build.js?942f206506ebd7959da3"></script></body>
+</html>
