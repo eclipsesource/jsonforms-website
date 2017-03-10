@@ -1,3 +1,6 @@
+---
+layout: doc
+---
 Additional documentation
 ========================
 
