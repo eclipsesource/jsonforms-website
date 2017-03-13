@@ -7,6 +7,8 @@ via `git worktree` (available since v2.5.0), so before starting on the page you 
 
 This will set-up the `dist` folder in such a way that its contents are versioned under the `gh-pages` branch.
 
+If git is complaining about the `dist` directory already existing, delete it and try again.
+
 # How to build 
 
 - Execute `npm install`

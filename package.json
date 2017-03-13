@@ -7,11 +7,11 @@
     "start": "webpack --config webpack/webpack.dev.js --watch",
     "build": "NODE_ENV=production webpack --config webpack/webpack.build.js",
     "gen-md": "bundle exec jekyll build --source partials/docs --destination _site/partials/docs/",
-    "publish": "cd dist && git add .; git commit -m \"$(git log --oneline -1 | cut -c 9-)\"; git push; cd .."
+    "publish": "msg=\"$(git log --oneline -1 | cut -c 9-)\"; cp CNAME dist; cd dist && git add .; git commit -m $msg; git push; cd .."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eclipsesource/jsonforms.git"
+    "url": "git+https://github.com/eclipsesource/jsonflorms-website.git"
   },
   "author": "",
   "license": "ISC",
