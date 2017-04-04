@@ -7,7 +7,7 @@
     "start": "webpack --config webpack/webpack.dev.js --watch",
     "build": "NODE_ENV=production webpack --config webpack/webpack.build.js",
     "gen-md": "bundle exec jekyll build --source partials/docs --destination _site/partials/docs/",
-    "publish": "msg=\"$(git log --oneline -1 | cut -c 9-)\"; cp CNAME dist; cd dist && git add .; git commit -m $msg; git push; cd .."
+    "publish": "cp CNAME dist; cd dist && git add .; git commit -m \"Published on $(date)\"; git push; cd .."
   },
   "repository": {
     "type": "git",
