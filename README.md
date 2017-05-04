@@ -22,5 +22,4 @@ If git is complaining about the `dist` directory already existing, delete it and
   git commit -m "<Messages describing your changes>"
   git push 
   ```
-- Run `npm run publish`, which will commit all newly added and modified files within the `dist` folder with the 
-  most recent commit message of the `website` branch
+- Run `npm run publish`, which will commit all newly added and modified files within the `dist` folder with a generated commit message.
