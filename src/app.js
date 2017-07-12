@@ -224,7 +224,6 @@ require('angular-animate');
 require('angular-aria');
 require('angular-material');
 require('angular-ui-router');
-require('angular-google-analytics');
 
 require('oclazyload');
 require('./examples/examples.routing');
@@ -242,7 +241,6 @@ angular
     // 'docs.routing',
     'docs.menudirective',
     'examples.menudirective',
-    'angular-google-analytics'
     // 'examples.routing'
   ]).directive('mainMenu', function() {
   return {
@@ -406,9 +404,23 @@ angular
     vm.localDynamicModelObject = JSON.parse(vm.localDynamicModel);
     vm.localDynamicViewObject = JSON.parse(vm.localDynamicView);
   };
-}]).config(['AnalyticsProvider', function (AnalyticsProvider) {
-  AnalyticsProvider.setAccount('UA-61092266-1');
-  }]).run(['Analytics', function(Analytics) { }]);;
+}]).config(config)
+  .run(run)
+
+
+function config($locationProvider, $stateProvider, $urlRouterProvider) {
+  $locationProvider.html5Mode(true);
+}
+
+function run($rootScope, $location, $window) {
+  // initialise google analytics
+  $window.ga('create', 'UA-61092266-1', 'auto');
+
+  // record page view on each state change
+  $rootScope.$on('$stateChangeSuccess', function (event) {
+    $window.ga('send', 'pageview', $location.path());
+  });
+}
 
 // Our code
 require('./support/support.controller');
