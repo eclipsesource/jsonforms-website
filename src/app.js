@@ -404,8 +404,9 @@ angular
     vm.localDynamicModelObject = JSON.parse(vm.localDynamicModel);
     vm.localDynamicViewObject = JSON.parse(vm.localDynamicView);
   };
-}]).config(config)
-  .run(run)
+}])
+  .config(['$locationProvider', config])
+  .run(['$rootScope', '$location', '$window', run]);
 
 
 function config($locationProvider, $stateProvider, $urlRouterProvider) {
