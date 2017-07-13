@@ -405,13 +405,7 @@ angular
     vm.localDynamicViewObject = JSON.parse(vm.localDynamicView);
   };
 }])
-  .config(['$locationProvider', config])
   .run(['$rootScope', '$location', '$window', run]);
-
-
-function config($locationProvider, $stateProvider, $urlRouterProvider) {
-  $locationProvider.html5Mode(true);
-}
 
 function run($rootScope, $location, $window) {
   // initialise google analytics
